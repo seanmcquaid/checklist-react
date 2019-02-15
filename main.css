@@ -5,3 +5,15 @@
 .searchBar {
     border: 2px solid blue;
 }
+
+.productTable {
+    border: 2px solid green;
+}
+
+.productCategoryRow {
+    border: 2px solid turquoise;
+}
+
+.productRow{
+    border: 2px solid red;
+}

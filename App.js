@@ -49,7 +49,49 @@ class SearchBar extends React.Component{
 }
 
 class ProductTable extends React.Component{
-    
+    render(){
+        let productCategories = data.map((category)=>{
+            return (<ProductCategoryRow title={category.title}/>)
+        })
+        return(
+            <div className="productTable">
+                {productCategories}
+            </div>
+        )
+    }
+}
+
+class ProductCategoryRow extends React.Component{
+    render(){
+        let productInformation = data[0].items[0].name
+        let productArray = data.map((item)=>{
+            return (item.items)
+        })
+        console.log(productArray)
+        return(
+            <div className="productCategoryRow">
+            <h4 className="category">{this.props.title}</h4>
+            {productInformation}
+            </div>
+        )
+    }
+}
+
+class ProductRow extends React.Component {
+    render(){
+        return(
+            <div className="productRow">
+                <div className="productInfo">
+                    <div className="name">
+                    {this.props.name}
+                    </div>
+                    <div className="price">
+                    {this.props.price}
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 
 
